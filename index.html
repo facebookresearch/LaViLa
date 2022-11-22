@@ -1,0 +1,343 @@
+<!-- Thanks to url=http://www.cs.cmu.edu/~dfouhey/3DP/index.html -->
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="StyleSheet" href="assets/style.css" type="text/css" media="all">
+
+    <title>LaViLa</title>
+    <script src="https://kit.fontawesome.com/c444c87c0c.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" async="" src="assets/ga.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    <style>
+        table.bordered,
+        th.bordered,
+        td.bordered {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 15px;
+        }
+
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+    <!-- bibliographic tags -->
+    <meta name="citation_title" content="Learning Video Representations from Large Language Models" />
+    <meta name="citation_author" content="Zhao, Yue" />
+    <meta name="citation_author" content="Misra, Ishan" />
+    <meta name="citation_author" content="Kr&auml;henb&uuml;hl, Philipp" />
+    <meta name="citation_author" content="Girdhar, Rohit" />
+    <meta name="citation_publication_date" content="20XX" />
+    <meta name="citation_conference_title" content="XXXX" />
+    <meta name="citation_pdf_url" content="https://arxiv.org/abs/2212.04501" />
+
+    <style type="text/css">
+        #primarycontent h1 {
+            font-variant: small-caps;
+        }
+
+        #primarycontent h3 {}
+
+        #primarycontent teasertext {
+            text-align: center;
+        }
+
+        #primarycontent p {
+            text-align: center;
+        }
+
+        #primarycontent {
+            text-align: justify;
+        }
+
+        #primarycontent p {
+            text-align: justify;
+        }
+
+        #primarycontent p iframe {
+            text-align: center;
+        }
+
+        #avatar {
+            border-radius: 50%;
+        }
+    </style>
+    <script type="text/javascript">
+        function togglevis(elid) {
+            el = document.getElementById(elid);
+            aelid = elid + "a";
+            ael = document.getElementById(aelid);
+            if (el.style.display == 'none') {
+                el.style.display = 'inline-table';
+                ael.innerHTML = "[Hide BibTex]";
+            } else {
+                el.style.display = 'none';
+                ael.innerHTML = "[Show BibTex]";
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <div id="primarycontent">
+        <h1 align="center" itemprop="name"><strong>
+               Learning Video Representations from Large Language Models 
+            </strong></h1>
+
+            <table id="authors" style="margin:auto;">
+                <tr>
+                    <td></td> <!-- For some reason it scales up the first td.. so adding a dummy td -->
+                    <td>
+                        <a href="http://zhaoyue-zephyrus.github.io/" target="_blank">Yue Zhao<sup>1,2</sup></a>
+                    </td>
+                    <td>
+                        <a href="https://imisra.github.io/" target="_blank">Ishan Misra<sup>1</sup></a>
+                    </td>
+                    <td>
+                        <a href="http://philkr.net" target="_blank">Philipp Kr&auml;henb&uuml;hl<sup>2</sup></a>
+                    </td>
+                    <td>
+                        <a href="http://rohitgirdhar.github.io/" target="_blank">Rohit Girdhar<sup>1</sup></a>
+                    </td>
+                </tr>
+            </table>
+
+            <table id="affliates" style="margin:auto;">
+                <tr>
+                    <td></td> <!-- For some reason it scales up the first td.. so adding a dummy td -->
+                    <td>
+                        <a href="https://ai.facebook.com/research/" target="_blank"><sup>1</sup>FAIR, Meta AI</a>
+                    </td>
+                    <td>
+                        <a href="https://www.cs.utexas.edu" target="_blank"> <sup>2</sup>The University of Texas at Austin</a>
+                    </td>
+                </tr>
+            </table>
+
+        <table id="navigate" style="margin:auto;">
+            <tr>
+                <td>
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <a href="https://arxiv.org/abs/2212.04501" target="_blank"> arxiv</a>
+                </td>
+                <td>
+                    <i class="fa-brands fa-github"></i>
+                    <a href="https://github.com/facebookresearch/LaViLa" target="_blank"> GitHub</a>
+                </td>
+                <td>
+                    <i class="fa-solid fa-cloud"></i>
+                    <a href="https://colab.research.google.com/drive/1gHWiEWywIotRivYQTR-8NQ6GJC7sJUe4" target="_blank"> Colab demo</a>
+                </td>
+                <td>
+                    <i class="fa-solid fa-quote-left"></i>
+                    <a href="assets/bib.txt">bibtex</a>
+                </td>
+            </tr>
+        </table>
+
+        <h3>Overview</h3>
+        <table class="results" align="center">
+            <tr>
+                <td align="center">
+                    <img src="https://github.com/facebookresearch/LaViLa/raw/main/assets/lavila_ego4d.gif" width="80%" /></a>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td class="credits" align="justify">
+                    We introduce <font style="font-variant: small-caps">LaViLa</font>(<u>L</u>anguage-<u>a</u>ugmented <u>Vi</u>deo <u>La</u>nguage Pretraining), a new approach to learning video-language representations by leveraging Large Language Models (LLMs).
+                    We repurpose pre-trained LLMs to be conditioned on visual input, and finetune them to create automatic video narrators.
+                    Our auto-generated narrations offer a number of advantages, including dense coverage of long videos, better temporal synchronization of the visual information and text, and much higher diversity of text.
+                    The video-text embedding learned contrastively with these additional auto-generated narrations outperforms the previous state-of-the-art on multiple first-person and third-person video tasks, both in zero-shot and finetuned setups.
+                    Most notably, <font style="font-variant: small-caps">LaViLa</font> obtains an absolute gain of 10.1% on EGTEA classification and 5.9% Epic-Kitchens-100 multi-instance retrieval benchmarks.
+                    Furthermore, <font style="font-variant: small-caps">LaViLa</font> trained with only half the narrations from the Ego4D dataset outperforms baseline models trained on the full set, and shows positive scaling behavior on increasing pre-training data and model size.
+                </td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+
+
+        <h3><font style="font-variant: small-caps">Narrator</font> Examples (egocentric videos)</h3>
+
+        <table id="examples" style="margin:auto;">
+            <tr>
+                <td></td> <!-- For some reason it scales up the first td.. so adding a dummy td -->
+                <td align="center" width="20%"><i class="fa-solid fa-film fa-2x"></i><br />Video</td>
+                <td><img src="https://github.com/facebookresearch/LaViLa/raw/main/assets/06919917-76bc-4adc-b944-2a722f165513.gif" /><br /></td>
+                <td><img src="https://github.com/facebookresearch/LaViLa/raw/main/assets/cf7c12db-1a9e-46d3-96d6-38174bbe373c.gif" /><br /></td>
+                <td><img src="https://github.com/facebookresearch/LaViLa/raw/main/assets/ab865129-78fa-47d4-8a50-ff8c5533246f.gif" /><br /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center" style="padding-top: 10px; padding-bottom: 10px;"><i class="fa-solid fa-user fa-2x"></i><br />Human narration:</td>
+                <td align="center">C separates the yarn.</td>
+                <td align="center">C lifts container.</td>
+                <td align="center">C operates the camera.</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center" style="padding-top: 10px; padding-bottom: 10px;"><i class="fa-solid fa-robot fa-2x"></i><br /><font style="font-variant: small-caps">Narrator</font> (run 1)</td>
+                <td align="center">C stetches the thread<br>with both hands.</td>
+                <td align="center">C wipes the countertop<br>with a sponge.</td>
+                <td align="center">C takes a photo shot.</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center" style="padding-top: 10px; padding-bottom: 10px;"><i class="fa-solid fa-robot fa-2x"></i><br /><font style="font-variant: small-caps">Narrator</font> (run 2)</td>
+                <td align="center">C pulls out the yarn<br>with her right hand.</td>
+                <td align="center">C moves the container.</td>
+                <td align="center">A man X looks at the<br>camera.</td>
+            </tr>
+        </table>
+        <table style="margin:auto;">
+            <tr>
+                <td></td>
+                <td align="right">^The starting "C" stands for "<u>c</u>amera wearer" according to <a href="https://ego4d-data.org/docs/data/annotation-guidelines/#narrations">Ego4D's narration format</a>.</td>
+            </tr>
+        </table>
+
+        <h3><font style="font-variant: small-caps">Narrator</font> Examples (third-person videos)</h3>
+
+        <table id="examples" style="margin:auto;">
+            <tr>
+                <td></td> <!-- For some reason it scales up the first td.. so adding a dummy td -->
+                <td align="center" width="20%"><i class="fa-solid fa-film fa-2x"></i><br />Video</td>
+                <td><img src="https://github.com/facebookresearch/LaViLa/raw/main/assets/mixkit-pastry-chef-cutting-a-loaf-into-slices-43015-medium.gif" /><br /></td>
+                <td><img src="https://github.com/facebookresearch/LaViLa/raw/main/assets/mixkit-hands-of-a-baker-kneading-a-dough-42467-medium.gif" /><br /></td>
+                <td><img src="https://github.com/facebookresearch/LaViLa/raw/main/assets/mixkit-chef-preparing-a-sauce-in-a-blender-43034-medium.gif" /><br /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center" style="padding-top: 10px; padding-bottom: 10px;"><i class="fa-solid fa-user fa-2x"></i><br />Ground-truth<br>caption:</td>
+                <td align="center">Pastry chef cutting bread into<br>slices during the preparation<br>of a dessert, inside a kitchen.</td>
+                <td align="center">Close-up shot of the hands<br>of an experienced baker<br>skillfully kneading bread dough.</td>
+                <td align="center">Chef preparing a sauce in<br>a blender, adding different<br>ingredients while blending.</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center" style="padding-top: 10px; padding-bottom: 10px;"><i class="fa-solid fa-robot fa-2x"></i><br /><font style="font-variant: small-caps">Narrator</font> (run 1)</td>
+                <td align="center">so now we're going to slice the bread</td>
+                <td align="center">i'm gonna make a little hole<br>in the middle of the dough here</td>
+                <td align="center">all right let's blend this up</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center" style="padding-top: 10px; padding-bottom: 10px;"><i class="fa-solid fa-robot fa-2x"></i><br /><font style="font-variant: small-caps">Narrator</font> (run 2)</td>
+                <td align="center">now i'm going to do is just slice<br>this up into a nice chunk and<br>then we're going to place it<br>on the plate</td>
+                <td align="center">you just keep kneading it</td>
+                <td align="center">the last step to making this<br>is to blend the ingredients<br>in the food processor</td>
+            </tr>
+        </table>
+
+        <h3>Main Results</h3>
+        <table id="results" style="margin:auto;">
+            <tr>
+                <td align="center" style="padding-top: 10px; padding-bottom: 10px;" width="30%">
+                    <img src="assets/radar.png" /><br />
+                    (a) State-of-the-art results on a wide range of video tasks.
+                </td>
+                <td align="center" style="padding-top: 10px; padding-bottom: 10px;" width="30%">
+                    <img src="assets/scaling_model.png" /><br />
+                    (b) <font style="font-variant: small-caps">LaViLa</font> scales with <font style="font-variant: small-caps">Narrator</font> size. Default refers to only using original narrations.
+                </td>
+                <td align="center" style="padding-top: 10px; padding-bottom: 10px;" width="30%">
+                    <img src="assets/scaling_data.png" /><br />
+                    (c) <font style="font-variant: small-caps">LaViLa</font> scales with human annotation size.
+                </td>
+            </tr>
+        </table>
+        
+        <h3>People</h3>
+
+        <table id="people" style="margin:auto;">
+            <tr>
+                <td></td> <!-- For some reason it scales up the first td.. so adding a dummy td -->
+                <td>
+                    <img src="assets/authors/yue.jpeg" /><br />
+                    <a href="http://zhaoyue-zephyrus.github.io/" target="_blank">Yue Zhao</a>
+                </td>
+                <td>
+                    <img src="assets/authors/ishan.jpeg" /><br />
+                    <a href="https://imisra.github.io/" target="_blank">Ishan Misra</a>
+                </td>
+                <td>
+                    <img src="assets/authors/philipp.jpg" /><br />
+                    <a href="http://philkr.net" target="_blank">Philipp Kr&auml;henb&uuml;hl</a>
+                </td>
+                <td>
+                    <img src="assets/authors/rohit.jpg" /><br />
+                    <a href="http://rohitgirdhar.github.io/" target="_blank">Rohit Girdhar</a>
+                </td>
+            </tr>
+        </table>
+
+
+        <h3>Paper</h3>
+        <table id="paper" class="center">
+            <tr></tr>
+            <tr>
+                <td>
+                    <a href="https://arxiv.org/abs/2212.04501"><img style="box-shadow: 5px 5px 2px #888888; margin: 10px"
+                            src="assets/paper-screenshot.png" width="150px" /></a>
+                </td>
+                <td></td>
+                <td>
+                    Y Zhao, I. Misra, P. Kr&auml;henb&uuml;hl, R. Girdhar<br />
+                    <a href="https://arxiv.org/abs/2212.04501">Learning Video Representations from Large Language Models</a><br />
+                    Tech Report <br />
+                    [<a href="https://arxiv.org/abs/2212.04501">arXiv</a>]
+                    [<a href="https://github.com/facebookresearch/LaViLa">code/models</a>]
+                    [<a href="javascript:togglevis('zhao2022lavila')" id="bibtex">bibtex</a>] <br /> <br />
+        </table>
+
+
+
+        <table class="bibtex" style="display:none" id="zhao2022lavila">
+            <tr>
+                <td>
+                    <pre>
+@inproceedings{zhao2022lavila,
+  title={Learning Video Representations from Large Language Models},
+  author={Zhao, Yue and Misra, Ishan and Kr{\"a}henb{\"u}hl, Philipp and Girdhar, Rohit},
+  booktitle={arXiv preprint arXiv:2212.04501},
+  year={2022}
+}
+
+</pre>
+                </td>
+            </tr>
+        </table>
+
+
+        <h3>Acknowledgement</h3>
+        <table class="results" align="center">
+            <tr>
+                <td class="credits" align="justify">
+                    We thank Naman Goyal, Stephen Roller and Susan Zhang for help with language models, Kevin Qinghong Lin for help with EgoVLP, and the Meta AI team for helpful discussions and feedback.
+                    This material is based upon work in-part supported by the National Science Foundation under Grant No. IIS-1845485.
+                    The website template is borrowed from <a href="https://facebookresearch.github.io/omnivore" target="_blank">omnivore</a>.
+                    The egocentric videos are from <a href="https://ego4d-data.org" target="_blank">Ego4D</a>.
+                    The 3rd-person videos of <a href="https://mixkit.co/free-stock-video/pastry-chef-cutting-a-loaf-into-slices-43015/" target="_blank">cutting a loaf</a>,
+                    <a href="https://mixkit.co/free-stock-video/hands-of-a-baker-kneading-a-dough-42467/" target="_blank">kneading a dough</a>,
+                    and <a href="https://mixkit.co/free-stock-video/chef-preparing-a-sauce-in-a-blender-43034/" target="_blank">preparing a sauce in a blender</a>
+                    are licensed under the <a href="https://mixkit.co/license/#videoFree" target="_blank">Mixkit Stock Video Free License</a>.
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+
+</html>
