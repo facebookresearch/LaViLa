@@ -3,7 +3,7 @@
 
 [**Learning Video Representations from Large Language Models**](http://arxiv.org/abs/2212.04501)                                     
 Yue Zhao, Ishan Misra, Philipp Kr&auml;henb&uuml;hl, Rohit Girdhar                 
-[arxiv](http://arxiv.org/abs/2212.04501) | [bibtex](#citing-lavila) | [colab](#narrator-demo)
+[arxiv](http://arxiv.org/abs/2212.04501) | [bibtex](#citing-lavila) | [colab](#narrator-demo) | [🤗 demo](https://huggingface.co/spaces/nateraw/lavila)
 
 LaViLa (**L**anguage **a**ugmented **Vi**deo **La**nguage Pretraining) is a new approach to learning video representations from Large Language Models (LLMs). We repurpose LLMs to be visually conditioned "Narrators", and use them to automatically generate video-language paired data. We use this data to then learn a video-langauge representation, outperforming prior work by large margins.
 
@@ -13,7 +13,8 @@ LaViLa (**L**anguage **a**ugmented **Vi**deo **La**nguage Pretraining) is a new 
 | --------|-------------|--------------|
 | <img src="assets/mixkit-pastry-chef-cutting-a-loaf-into-slices-43015-medium.gif" height=128> | so now we're going to slice the bread | now i'm going to do is just slice<br>this up into a nice chunk and<br>then we're going to place it<br>on the plate |
 
-[Try out](#narrator-demo)  our Narrator to generate text descriptions for your own videos!
+[Try out](#narrator-demo) our Narrator to generate text descriptions for your own videos! 
+You can also try out a web demo here: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/nateraw/lavila)
 
 The resulting video-language model sets a new **state-of-the-art** on a number of popular video tasks!
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/1893429/205997492-a6cbc7c1-1f8e-4fad-9d94-f9e22920272d.png">
@@ -48,7 +49,8 @@ We provide some generated samples by our NARRATOR:
 |  NARRATOR generation  (b)    |  C pulls out the yarn with her right hand. | C moves the container.                  |  A man X looks at the camera.            |
 
 
-Run the narrator demo using Colab (no GPU needed): [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gHWiEWywIotRivYQTR-8NQ6GJC7sJUe4)
+Run the narrator demo using Colab (no GPU needed): [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gHWiEWywIotRivYQTR-8NQ6GJC7sJUe4)               
+or on the web using 🤗 Spaces: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/nateraw/lavila) (thanks to [@nateraw](https://github.com/nateraw)!)
 
 Since Colab free account offers very limited RAM, if you'd like to run the demo with a larger model, please run [./demo_narrator.py](./demo_narrator.py) locally. For more technical details, please refer to Sec 4.1 in our paper.
 
