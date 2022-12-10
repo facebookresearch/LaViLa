@@ -1,0 +1,6 @@
+@inproceedings{zhao2022lavila,
+  title={Learning Video Representations from Large Language Models},
+  author={Zhao, Yue and Misra, Ishan and Kr{\"a}henb{\"u}hl, Philipp and Girdhar, Rohit},
+  booktitle={arXiv preprint arXiv:2212.04501},
+  year={2022}
+}
