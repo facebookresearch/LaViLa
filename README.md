@@ -3,7 +3,7 @@
 
 [**Learning Video Representations from Large Language Models**](http://arxiv.org/abs/2212.04501)                                     
 Yue Zhao, Ishan Misra, Philipp Kr&auml;henb&uuml;hl, Rohit Girdhar                 
-[arxiv](http://arxiv.org/abs/2212.04501) | [bibtex](#citing-lavila) | [colab](#narrator-demo) | [🤗 demo](https://huggingface.co/spaces/nateraw/lavila)
+[arxiv](http://arxiv.org/abs/2212.04501) | [bibtex](#citing-lavila) | [colab](#narrator-demo) | [🤗 demo](https://huggingface.co/spaces/nateraw/lavila) | [website](http://facebookresearch.github.io/LaViLa)
 
 LaViLa (**L**anguage **a**ugmented **Vi**deo **La**nguage Pretraining) is a new approach to learning video representations from Large Language Models (LLMs). We repurpose LLMs to be visually conditioned "Narrators", and use them to automatically generate video-language paired data. We use this data to then learn a video-langauge representation, outperforming prior work by large margins.
 
