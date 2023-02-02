@@ -95,6 +95,8 @@ It will generate a pickle file (`$output_dir/total.pkl`) which is a list of quin
 
 For narrator-generated narrations on Ego4D ground-truth clips, we also provide a [replica](https://dl.fbaipublicfiles.com/lavila/metadata/ego4d/ego4d_train.narrator_63690737.return_10.pkl). Note that the narrator used here is our best performing one.
 
+In addition, we can apply this narrator over the entire video for temporally dense auto-narration. We provide a [replica](https://dl.fbaipublicfiles.com/lavila/metadata/ego4d/ego4d_train.uncovered_all.narrator_63690737.return_5.pkl) (excluding the annotated clips).
+
 ## Rephrasing human narrations using LAVILA-Rephraser
 
 Rephraser is a standard LLM that can paraphrase narrations in existing clips.
@@ -112,7 +114,7 @@ Now we are ready to pre-train our LAVILA's dual-encoder by combining human annot
 ```bash
 python run_with_submitit_pretrain.py --model CLIP_OPENAI_TIMESFORMER_BASE \
     --metadata datasets/Ego4D/ego4d_train.rephraser.no_punkt_top3.pkl \
-    --metadata-aux datasets/Ego4D/ego4d_train.narrator_63690737.return_10.pkl \
+    --metadata-aux datasets/Ego4D/ego4d_train.narrator_63690737.return_10.pkl \  # also optionally add `datasets/Ego4D/ego4d_train.uncovered_all.narrator_63690737.return_5.pkl`
     --norm-embed --freeze-temperature \
     --freeze-pseudo-temperature \
     --fix-lr --contrastive-use-vissl \
