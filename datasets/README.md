@@ -51,7 +51,7 @@ git clone https://github.com/epic-kitchens/epic-kitchens-100-annotations
 
     a. For raw videos, please download them from [https://epic-kitchens.github.io/](https://epic-kitchens.github.io/).
 
-    b. (Recommended) The raw videos are huge (~1 TB). As an alternative, please check out a [resized version]().
+    b. (Recommended) The raw videos are huge (~1 TB). As an alternative, please check out a [resized version](https://utexas.box.com/s/l7ij81ie5q07p9fdg0vtejihq61liln9).
 
 3. (For EK-100 MIR)
 
