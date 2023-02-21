@@ -10,10 +10,10 @@ import os
 import urllib.request
 from collections import OrderedDict
 
-import decord
 import torch
 import torchvision.transforms as transforms
 import torchvision.transforms._transforms_video as transforms_video
+import decord
 
 from lavila.data.video_transforms import Permute
 from lavila.data.datasets import get_frame_ids, video_loader_by_frames
