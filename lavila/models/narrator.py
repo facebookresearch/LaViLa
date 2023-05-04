@@ -14,9 +14,13 @@ from torch import nn
 import torch.nn.functional as F
 from einops import rearrange, repeat
 from transformers import BeamSearchScorer
-from transformers.generation_logits_process import (
-    LogitsProcessorList, TopKLogitsWarper, TopPLogitsWarper,
-    TemperatureLogitsWarper, TypicalLogitsWarper, LogitNormalization
+from transformers.generation.logits_process import (
+    LogitsProcessorList,
+    TopKLogitsWarper,
+    TopPLogitsWarper,
+    TemperatureLogitsWarper,
+    TypicalLogitsWarper,
+    LogitNormalization,
 )
 
 from lavila.models.coca import CrossAttention, LayerNorm

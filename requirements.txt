@@ -5,7 +5,7 @@ decord==0.6.0
 einops==0.4.1
 pandas==1.4.2
 pytorchvideo==0.1.5
-transformers==4.21
+transformers==4.27
 ftfy==4.4.3
 spacy==3.4.1
 scikit-learn==1.1.1
