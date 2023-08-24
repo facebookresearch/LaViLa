@@ -13,7 +13,9 @@ $LAVILA_ROOT/datasets/
 ## Ego4D
 1. Download [Ego4D videos](https://ego4d-data.org/docs/start-here/#download-data) (license is required).
 
-2. Preprocess（TBA)
+2. Preprocess
+
+    We cut each video into 5-minute-long chunks and resize the smaller size to be 288 pixels for faster IO. Please refer to [this script](scripts/crop_and_resize_ego4d.sh) for more details. 
 
 3. Download annotations
 
